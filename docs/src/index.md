@@ -4,11 +4,15 @@ CurrentModule = FeatureDescriptors
 
 # FeatureDescriptors
 
-Documentation for [FeatureDescriptors](https://github.com/invenia/FeatureDescriptors.jl).
-
-```@index
-```
-
 ```@autodocs
 Modules = [FeatureDescriptors]
+```
+
+# TestUtils
+```@autodocs
+Modules = [FeatureDescriptors.TestUtils]
+```
+
+# Index
+```@index
 ```

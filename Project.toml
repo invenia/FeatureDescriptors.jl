@@ -1,7 +1,10 @@
 name = "FeatureDescriptors"
 uuid = "cb0561c3-42a1-46a3-8749-4ae46de0afcc"
 authors = ["Invenia Technical Computing Corporation"]
-version = "0.1.0"
+version = "1.0.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [compat]
 julia = "1"

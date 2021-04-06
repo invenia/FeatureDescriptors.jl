@@ -30,6 +30,7 @@ deps = ["ArgTools", "LibCURL", "NetworkOptions"]
 uuid = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 
 [[FeatureDescriptors]]
+deps = ["Test"]
 path = ".."
 uuid = "cb0561c3-42a1-46a3-8749-4ae46de0afcc"
 version = "0.1.0"
