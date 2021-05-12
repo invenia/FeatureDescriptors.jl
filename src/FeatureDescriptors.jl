@@ -54,6 +54,12 @@ function label(D::Type{<:Descriptor})
     return Symbol(s)
 end
 
+# Allow sorting descriptors lexographically
+# NOTE: isless(hash(A), hash(B)) would be faster, but:
+# 1. we shouldn't need to sort that many descriptors
+# 2. this is more human readable/understandable
+Base.isless(A::Type{<:Descriptor}, B::Type{<:Descriptor}) = isless(string(A), string(B))
+
 include("test_utils.jl")
 
 end
