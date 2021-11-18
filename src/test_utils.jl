@@ -29,10 +29,11 @@ Test that a subtype of [`Descriptor`](@ref) implements the expected API.
 """
 function test_interface(D)
     @testset "test_interface $D" begin
-        @test FeatureDescriptors.sources(D) isa Vector{String}
+        # We don't care what sources returns, just that an applicable method is defined.
+        @test applicable(FeatureDescriptors.sources, D)
         @test FeatureDescriptors.quantity_key(D) isa Symbol
         categories = FeatureDescriptors.categorical_keys(D)
-        @test (isempty(categories) || categories isa Vector{Symbol})
+        @test (isempty(categories) || eltype(categories) == Symbol)
         @test FeatureDescriptors.label(D) isa Symbol
     end
 end

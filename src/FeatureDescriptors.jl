@@ -21,10 +21,12 @@ the following methods:
 abstract type Descriptor end
 
 """
-    sources(::Descriptor) -> Vector{String}
+    sources(::Descriptor)
 
-Returns the data sources for the [`Descriptor`](@ref), e.g. the names or paths to the tables
-containing the required data: `["temperature.csv", "locations.csv"]`.
+Returns the data sources for the [`Descriptor`](@ref), e.g. the names of the tables that
+contain the required data: `["temperature.csv", "locations.csv"]`.
+
+Users are free to determine what kind of source is appropriate for a descriptor.
 """
 function sources end
 
@@ -36,10 +38,10 @@ Returns the quantitative variable for the [`Descriptor`](@ref), e.g. `:temperatu
 function quantity_key end
 
 """
-    categorical_keys(::Descriptor) -> Vector
+    categorical_keys(::Descriptor)
 
 Returns the categorical variables for the [`Descriptor`](@ref), e.g. `[:colour, :shape]`.
-Returns an empty vector if no categorical variables exist.
+If no categorical variables exist, this should be set to an empty collection.
 """
 function categorical_keys end
 
