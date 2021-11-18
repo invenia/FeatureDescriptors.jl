@@ -62,6 +62,6 @@ All `Descriptor`s are required to implement the following:
 
 1. A `sources` method that specifies where to retrieve the data. A `Descriptor` may be associated with multiple sources, because it may be necessary to perform [feature engineering](https://invenia.github.io/FeatureTransforms.jl/stable/) to create the derived feature.
 1. A `quantity_key` method that denotes the name of the quantitative variable for the feature, such as `:temperature` or `:price`. For the sake of transparency and simplicity, only one `quantity_key` may be associated with a given `Descriptor`.
-1. A `categorical_keys` method that denotes the names of the categorical variables for the feature, such as `:colour` or `:type`. If no categorical variables are needed, this returns an empty vector.
+1. A `categorical_keys` method that denotes the names of the categorical variables for the feature, such as `:colour` or `:type`. If no categorical variables are needed, this returns an empty collection.
 
 You can ensure your `Descriptor` is implemented correctly by calling the [`TestUtils.test_interface`](https://invenia.github.io/FeatureDescriptors.jl/stable/index/#Testutils) function.
