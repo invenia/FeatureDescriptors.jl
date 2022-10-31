@@ -54,6 +54,15 @@ function label(D::Type{<:Descriptor})
     return Symbol(s)
 end
 
+"""
+    parents(D::Descriptor) -> Vector
+
+Returns the parent [`Descriptor`](@ref) for each table names returned from
+[`sources`](@ref). Similar to `Base.parent`, we return input input `D` when there
+is no parent for a source.
+"""
+parents(D::Type{<:Descriptor}) = fill(D, length(sources(D)))
+
 # Allow sorting descriptors lexographically
 # NOTE: isless(hash(A), hash(B)) would be faster, but:
 # 1. we shouldn't need to sort that many descriptors
