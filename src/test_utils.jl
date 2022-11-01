@@ -24,7 +24,7 @@ FeatureDescriptors.categorical_keys(::Type{<:FakeDescriptor}) = [:category1, :ca
 
 
 """
-    OtherFakeDescriptor <:Descriptor
+    OtherFakeDescriptor <: Descriptor
 
 Another fake [`Descriptor`](@ref) for testing purposes only.
 """

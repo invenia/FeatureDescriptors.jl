@@ -58,7 +58,7 @@ end
     parents(D::Descriptor) -> Vector
 
 Returns the parent [`Descriptor`](@ref) for each table names returned from
-[`sources`](@ref). Similar to `Base.parent`, we return input input `D` when there
+[`sources`](@ref). Similar to `Base.parent`, we return input `D` when there
 is no parent for a source.
 """
 parents(D::Type{<:Descriptor}) = fill(D, length(sources(D)))
