@@ -16,6 +16,8 @@ abstract type FakeDescriptorC{T} <: FakeDescriptor end
     @testset "FakeDescriptor" begin
 
         test_interface(FakeDescriptor)
+        test_interface(OtherFakeDescriptor)
+        test_interface(DerivedFakeDescriptor)
 
         @testset "naive subtyping" begin
             # Inherits the supertype behaviour
